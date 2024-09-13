@@ -1,0 +1,84 @@
+.upper-main-div{
+    width:100%;
+    height:100%;
+    display:flex;
+    justify-content: space-between;
+    align-items: start;
+    margin-top: 10px;
+}
+.upper-div{
+    width:30% !important;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100% !important;
+}
+.css-1aquho2-MuiTabs-indicator{
+    background-color: #37474f !important;
+}
+.css-1h9z7r5-MuiButtonBase-root-MuiTab-root.Mui-selected {
+    color: #2E3D49 !important;
+}
+
+
+
+.table-container {
+    scrollbar-width: thin;
+    scrollbar-color: #37474f95 #eceff1; /* Scrollbar thumb color and track color */
+    scrollbar-gutter: stable;
+  }
+  
+  /* WebKit-based browsers */
+  .table-container::-webkit-scrollbar {
+    width: 12px !important; /* Width of the scrollbar */
+    height: 12px !important; /* Height of the scrollbar for horizontal scrolling */
+  }
+  
+  .table-container::-webkit-scrollbar-thumb {
+    background-color: #37474f7b; /* Color of the scrollbar thumb */
+    border-radius: 10px; /* Roundness of the scrollbar thumb */
+    border: 1px solid #eceff1; /* Space around the thumb for aesthetics */
+    border-radius: 10px !important;
+  }
+  
+  .table-container::-webkit-scrollbar-thumb:hover {
+    background-color: #37474f94; /* Darker thumb color on hover */
+  }
+  
+  .table-container::-webkit-scrollbar-track {
+    background-color: #eceff1; /* Track color */
+    border-radius: 10px !important; /* Roundness of the track */
+  }
+  
+  /* Scrollbar corner for horizontal + vertical scrollbars */
+  .table-container::-webkit-scrollbar-corner {
+    background-color: #eceff1; /* Color of the corner piece */
+    border-radius: 10px !important;
+  }
+  
+  /* Customizing for Firefox */
+  @-moz-document url-prefix() {
+    .table-container {
+      scrollbar-width: thin;
+      scrollbar-color: #37474fae #eceff1; /* Scrollbar thumb and track color for Firefox */
+    }
+  }
+
+
+  @media screen and (max-width:650px) {
+    .upper-main-div{
+      margin: auto;
+      display:flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-direction: column-reverse !important;
+  }
+  .upper-div{
+    margin-bottom: 20px !important;
+  }
+  .parts-description{
+    width: 94vw !important;
+  }
+    
+} 

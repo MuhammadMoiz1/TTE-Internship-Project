@@ -1,0 +1,48 @@
+.main-div{
+    width:100%;
+    height:100vh;
+    background-color:#ffff;
+    display:flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    position:relative;
+    margin: 0;
+    padding: 0;
+}
+.customFont{
+    margin-top:2rem !important;
+    background:#37474f !important;
+    border-radius: 20px !important;
+    margin-left: 10px !important;
+}
+.customFont:hover{
+    background-color: #2471a3 !important;
+    color: white !important;
+    transform: scale(1.1) !important;
+}
+.arrowLeft{
+    position: absolute;
+    left:0;
+    top:40%;
+    padding: 1.3rem;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+}
+.arrowRight{
+    position: absolute;
+    right:0;
+    top:40%;
+    padding: 1.3rem;
+    border-radius: 50%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    cursor: pointer;
+}
+.arrowLeft:hover,.arrowRight:hover{
+    color: #2471a3;
+}

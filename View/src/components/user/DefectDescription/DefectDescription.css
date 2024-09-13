@@ -1,0 +1,17 @@
+
+@media screen and (max-width:800px) {
+
+    .main-cont{
+        flex-direction: column-reverse;
+    }
+    .left-cont{
+        width: 100vw !important;
+    }
+    .right-cont{
+        width: 100vw !important;
+    }
+    .chart{
+        margin:auto;
+        margin-bottom: 20px;
+    }
+}

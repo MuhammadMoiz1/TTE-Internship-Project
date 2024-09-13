@@ -1,0 +1,12 @@
+.card-one:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  }
+  
+  .card-one:hover img {
+    transform: scale(1.05);
+  }
+  .card-one{
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+ 
