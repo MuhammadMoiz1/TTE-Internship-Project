@@ -14,7 +14,7 @@ const AdminModels = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5555/models')
+      .get(`${import.meta.env.VITE_API_URL}/models`)
       .then((res) => {
         setData(res.data);
       });

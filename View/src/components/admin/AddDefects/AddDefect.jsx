@@ -23,7 +23,7 @@ const AddDefect = () => {
     if (file) {
       formData.append('image', file);
       try {
-        const res = await axios.post('http://localhost:5555/admin/upload', formData,
+        const res = await axios.post(`${import.meta.env.VITE_API_URL}/admin/upload`, formData,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -88,7 +88,7 @@ const AddDefect = () => {
     let data = { ...defect };
     const token = localStorage.getItem('token');
     try {
-      await axios.post('http://localhost:5555/admin/addDefect', data,
+      await axios.post(`${import.meta.env.VITE_API_URL}/admin/addDefect`, data,
         {
           headers: {
             Authorization: `Bearer ${token}`,

@@ -75,6 +75,15 @@ const Details = (props) => {
         >
           <strong>Color:</strong> {props.data.Color}
         </Typography>)}
+        {props.data.Class&&(<Typography 
+          variant="body1" 
+          style={{
+            margin: '4px 0',
+            wordBreak: 'break-word' // Allow text to break and wrap
+          }}
+        >
+          <strong>Class:</strong> {props.data.Class}
+        </Typography>)}
         {props.data.addInfo&&(<Typography 
           variant="body1" 
           style={{

@@ -25,6 +25,7 @@ const AllParts = (props) => {
         Description: factory.Description,
         "Item Type": factory['Item Type'],
         Consumption: factory.Consumption,
+        Class: factory.Class,
         addInfo: factory.addInfo
       }))
     ),
@@ -37,6 +38,7 @@ const AllParts = (props) => {
       Description: factory.Description,
       "Item Type": factory['Item Type'],
       Consumption: factory.Consumption,
+      Class: factory.Class,
       addInfo: factory.addInfo
     }))
   ];
@@ -49,7 +51,8 @@ const AllParts = (props) => {
     row.Code?.toLowerCase().includes(search.toLowerCase()) ||
     row.Description?.toLowerCase().includes(search.toLowerCase()) ||
     row["Item Type"]?.toLowerCase().includes(search.toLowerCase()) ||
-    row.Consumption?.toLowerCase().includes(search.toLowerCase())
+    row.Consumption?.toLowerCase().includes(search.toLowerCase())||
+    row.Class?.toLowerCase().includes(search.toLowerCase())
   );
 
   return (
@@ -92,6 +95,7 @@ const AllParts = (props) => {
               <TableCell>Description</TableCell>
               <TableCell>Item Type</TableCell>
               <TableCell>Consumption</TableCell>
+              <TableCell>Class</TableCell>
               <TableCell>Actions</TableCell>
             </TableRow>
           </TableHead>
@@ -106,6 +110,7 @@ const AllParts = (props) => {
                   <TableCell>{row.Description}</TableCell>
                   <TableCell>{row['Item Type']}</TableCell>
                   <TableCell>{row.Consumption}</TableCell>
+                  <TableCell>{row.Class}</TableCell>
                   <TableCell>
                     <IconButton onClick={() => handleRowClick(row.id)}>
                       {expandedRows[row.id] ? <ExpandLess /> : <ExpandMore />}

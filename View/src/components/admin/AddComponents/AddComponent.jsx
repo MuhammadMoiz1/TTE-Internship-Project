@@ -46,7 +46,7 @@ const handleImageUpload = (event,index) => {
   const token = localStorage.getItem('token');
   if (file) {
     formData.append('image',file);
-    axios.post('http://localhost:5555/admin/upload',formData,
+    axios.post(`${import.meta.env.VITE_API_URL}/admin/upload`,formData,
       {
         headers: {
           Authorization: `Bearer ${token}`,

@@ -12,7 +12,7 @@ const AdminDefect = (props) => {
   const handleEdit = () => {
     console.log(props.id)
     axios
-    .get(`http://localhost:5555/defects/${props.id}`)
+    .get(`${import.meta.env.VITE_API_URL}/defects/${props.id}`)
     .then((res)=>{
      let data=res.data;
      navigate(`/admin/defects/edit`,{
@@ -26,7 +26,7 @@ const AdminDefect = (props) => {
   const handleDelete = async () => {
     const token = localStorage.getItem('token');
     try {
-      await axios.delete(`http://localhost:5555/admin/deleteDefects/${props.id}`,
+      await axios.delete(`${import.meta.env.VITE_API_URL}/admin/deleteDefects/${props.id}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -58,7 +58,7 @@ const AdminDefect = (props) => {
         <CardActionArea>
           <CardMedia
             component="img"
-            image={`http://localhost:5555${props.img}`}
+            image={`${import.meta.env.VITE_API_URL}${props.img}`}
             height="150"
             alt={props.DefectName}
             style={{ objectFit: 'contain' }}

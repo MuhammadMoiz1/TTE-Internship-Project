@@ -18,7 +18,7 @@ const AddModel = () => {
   const [mi_reload,setMi_reload]=useState(0);
   
   useEffect(() => {
-    axios.get('http://localhost:5555/models')
+    axios.get(`${import.meta.env.VITE_API_URL}/models`)
       .then((res) => {
         setName(res.data);
       })
@@ -36,7 +36,7 @@ const AddModel = () => {
       
       formData.append('image', file);
       
-      axios.post('http://localhost:5555/admin/upload', formData,
+      axios.post(`${import.meta.env.VITE_API_URL}/admin/upload`, formData,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -115,7 +115,7 @@ const AddModel = () => {
     if (value) {
       console.log(value._id)
       axios
-    .get(`http://localhost:5555/models/${value._id}`)
+    .get(`${import.meta.env.VITE_API_URL}/models/${value._id}`)
     .then((res)=>{
      let data=res.data;
      data._id=undefined;

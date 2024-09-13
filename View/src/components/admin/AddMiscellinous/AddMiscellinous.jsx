@@ -39,7 +39,7 @@ const handleImageUpload =  (event,index) => {
   const token = localStorage.getItem('token');
   if (file) {
     formData.append('image',file);
-    axios.post('http://localhost:5555/admin/upload',formData,
+    axios.post(`${import.meta.env.VITE_API_URL}/admin/upload`,formData,
       {
         headers: {
           Authorization: `Bearer ${token}`,
@@ -85,6 +85,7 @@ const addField = () => {
       Description: '',
       "Item Type": '',
       Consumption: '',
+      Class:'',
       image:'',
       addInfo:''
     };
@@ -190,6 +191,17 @@ const addField = () => {
            fullWidth
          />
          </Grid>
+         <Grid item xs={12} sm={6} md={3}>
+         <TextField
+           name="Class"
+           key={`Class-${index}-${renderKey}`}
+           label="Class"
+           variant="standard"
+           onBlur={event => handleFieldChange(event, index)}
+           defaultValue={form.Class}
+           fullWidth
+         />
+       </Grid>
          <Grid item  xs={12} sm={12} md={12}>
          <TextField
            key={`addInfo-${index}-${renderKey}`}

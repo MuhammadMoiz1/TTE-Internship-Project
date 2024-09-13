@@ -13,6 +13,7 @@ const factoryInfoSchema = new mongoose.Schema({
     addInfo:String,
     "Item Type": String,
     image: String,
+    Class: String,
     Consumption: String
       
 });
@@ -39,6 +40,7 @@ const miscellinousSchema = new mongoose.Schema({
     addInfo:String,
     "Item Type": String,
     image: String,
+    Class: String,
     Consumption: String
 });
 

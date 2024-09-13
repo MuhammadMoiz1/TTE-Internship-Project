@@ -12,7 +12,7 @@ const AdminModel = (props) => {
   const [openDialog, setOpenDialog] = React.useState(false);  
   const editModel=()=>{
     axios
-      .get(`http://localhost:5555/models/${props.index}`)
+      .get(`${import.meta.env.VITE_API_URL}/models/${props.index}`)
       .then((res)=>{
        let data=res.data;
        context.setModel(data);
@@ -60,7 +60,7 @@ const AdminModel = (props) => {
           <CardActionArea>
             <CardMedia
               component="img"
-              image={`http://localhost:5555${props.img}`}
+              image={`${import.meta.env.VITE_API_URL}${props.img}`}
               height="150"
               style={{ objectFit: 'contain' }}
             />

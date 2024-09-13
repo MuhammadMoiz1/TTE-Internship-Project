@@ -11,7 +11,7 @@ const AdminDefects = () => {
 
   useEffect(() => {
     axios
-      .get('http://localhost:5555/defects')
+      .get(`${import.meta.env.VITE_API_URL}/defects`)
       .then((res) => {
         setData(res.data);
       });

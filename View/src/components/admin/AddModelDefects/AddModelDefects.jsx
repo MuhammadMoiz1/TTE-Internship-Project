@@ -8,7 +8,7 @@ const AddModelDefects = (props) => {
   const context = useContext(modelContext);
 
   useEffect(() => {
-    axios.get('http://localhost:5555/defects')
+    axios.get(`${import.meta.env.VITE_API_URL}/defects`)
       .then((res) => {
         setAllDefects(res.data);
       });
