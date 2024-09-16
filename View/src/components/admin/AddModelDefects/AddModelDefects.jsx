@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import { Checkbox, FormControlLabel, FormGroup, Typography } from '@mui/material';
+import { Button, Checkbox, FormControlLabel, FormGroup, Typography } from '@mui/material';
 import axios from 'axios';
 import { modelContext } from '../Context/Context';
 
 const AddModelDefects = (props) => {
   const [allDefects, setAllDefects] = useState([]);
   const context = useContext(modelContext);
+  const [render,setRender]=useState(0);
 
   useEffect(() => {
     axios.get(`${import.meta.env.VITE_API_URL}/defects`)
@@ -13,6 +14,11 @@ const AddModelDefects = (props) => {
         setAllDefects(res.data);
       });
   }, []);
+
+  const clearSelection=()=>{
+    context.model.component[props.index].defects=[];
+    setRender(prev=>prev+1);
+  }
 
   const handleChange = (event) => {
     const defectId = event.target.value;
@@ -53,6 +59,7 @@ const AddModelDefects = (props) => {
             key={defect._id}
             control={
               <Checkbox
+               key={`check-${render}`}
                 value={defect._id}
                 checked={context.model.component[props.index]?.defects?.some(d => d.id === defect._id) || false}
                 onChange={handleChange}
@@ -62,6 +69,7 @@ const AddModelDefects = (props) => {
           />
         ))}
       </FormGroup>
+      <Button onClick={clearSelection}>Clear Selection</Button>
     </div>
   );
 };

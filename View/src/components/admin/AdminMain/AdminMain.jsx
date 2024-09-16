@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Grid,Card,CardActionArea,CardMedia,Typography,CardContent } from '@mui/material';
-
+import dashimage from '../../user/Dashboard/assets/one.jpeg'
 const CardOne=(props)=>{   
     const navigate=useNavigate();
      return(
@@ -38,6 +38,12 @@ const AdminMain = () => {
        head='Manage Defects'
        des='Identify and understand the defects happens during manufacturing process to ensure quality control and continuous improvement.'
        path='/admin/defects'
+      />
+      <CardOne  
+       img={dashimage}
+       head='Upload Defects Data'
+       des='Easily manage and upload defect data by importing an Excel file. Click here to add defect records, ensuring accurate tracking and reporting across all mobile models and components.'
+       path='/dashboard/fileupload'
       />
     </Grid>
       
