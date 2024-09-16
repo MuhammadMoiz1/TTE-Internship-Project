@@ -84,7 +84,7 @@ const DefectDescription = (props) => {
       
     <div className='chart'>
       
-       <PieChart
+       {props.total&&(<PieChart
       series={[
         {
           data: [
@@ -103,7 +103,7 @@ const DefectDescription = (props) => {
         },
       }}
       {...sizing}
-    />
+    />)}
        </div>
       
       </div>
