@@ -17,7 +17,7 @@ const DefectDescription = (props) => {
   const [data,setData]=React.useState({});
   React.useEffect(()=>{
     axios
-    .get(`http://localhost:5555/defects/${props.id}`)
+    .get(`${import.meta.env.VITE_API_URL}/defects/${props.id}`)
     .then((res)=>{
      let data=res.data;
      setData(data);
