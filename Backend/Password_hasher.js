@@ -31,4 +31,4 @@ const createUser = async (username, password) => {
 };
 
 // Example usage
-createUser('owais', 'owais1234');
+createUser('admin', 'admin@TTE');
