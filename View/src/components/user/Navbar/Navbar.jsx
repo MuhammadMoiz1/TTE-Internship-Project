@@ -37,12 +37,16 @@ const Navbar = () => {
         }
         onClick={()=>{setClose(false);setHamClass("navbar-menu")}}
         >Defects</NavLink>
-        <NavLink to="/dashboard" 
-        className={({ isActive, isPending }) =>
-          isPending ? "" : isActive ? "active" : ""
-        }
-        onClick={()=>{setClose(false);setHamClass("navbar-menu")}}
-        >Dashboard</NavLink>
+        <a 
+  href="http://172.17.43.24:4173/fileUpload" 
+  className="dashboard-link" 
+  onClick={() => {
+    setClose(false);
+  }}
+>
+  Dashboard
+</a>
+
         <NavLink 
         to="/login" 
         style={{display:'none'}} 

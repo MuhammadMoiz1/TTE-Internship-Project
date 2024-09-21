@@ -7,7 +7,9 @@ const CardOne=(props)=>{
      return(
       <Grid item  xs={12} sm={12} md={6}>
         <Card sx={{ display: 'flex', flexDirection: 'column', height: '100%' ,maxWidth: 445}} className='card-one' >
-        <CardActionArea onClick={()=>navigate(props.path)}>
+        <CardActionArea onClick={()=>
+          navigate(props.path)
+          }>
           <CardMedia
             component="img"
             image={props.img}
